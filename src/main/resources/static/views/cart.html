@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ang="en" ng-app="app">
 <head>
-    <title>Products</title>
+    <title>Cart</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -31,7 +31,7 @@
 
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>BOT Shop Products</h1>
+        <h1>BOT Shop</h1>
         <p>Scans, Cracks & Hacks</p>
     </div>
 </div>
@@ -44,33 +44,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="views/home.html">Logo</a>
+            <a class="navbar-brand" href="home.html">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="views/home.html">Home</a></li>
-                <li><a href="index.html">Products</a></li>
-                <li><a href="views/contacts.html">Contact</a></li>
+                <li class="active"><a href="home.html">Home</a></li>
+                <li><a href="../index.html">Products</a></li>
+                <li><a href="contacts.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="views/register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
-                <li><a href="views/cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+                <li><a href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+                <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="product in greeting">
-    <div>
-        <div style="width:250px;border:2px solid green;">
-            <div ng-style="{'background-image':'url(data:image/jpeg;base64,'+product.picture[0]+')'}"
-                 style="background-size: contain;width:240px;height:240px; background-repeat: no-repeat">
-            </div>
-            <p>Product : {{product.time}}</p>
-            <p>Price : {{product.price}}</p>
-            <button id="{{product.id}}" class=""></button>
 
-        </div>
-    </div>
-</div>
 </body>
 </html>
