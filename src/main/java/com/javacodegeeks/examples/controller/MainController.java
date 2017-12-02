@@ -1,14 +1,12 @@
 package com.javacodegeeks.examples.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class MainController {
 
-    @RequestMapping(value="/",method = RequestMethod.GET)
-    public String homepage(){
-        return "index";
+    @GetMapping(value = "/index/{id}")
+    public String homepage(@PathVariable String id){
+        return "index " + id;
     }
 }
