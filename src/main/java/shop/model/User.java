@@ -1,10 +1,14 @@
 package shop.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+@Entity
 public class User {
 
     @NotNull
+    @Id
     private int id;
     @NotNull
     private String login;
