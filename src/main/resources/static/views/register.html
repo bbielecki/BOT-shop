@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" ng-app="app" >
 <head>
   <meta charset="UTF-8">
   <title>Sign-Up/Login Form</title>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script src="../js/register-ctrl.js"></script>
 
   
       <link rel="stylesheet" href="../css/style.css">
@@ -12,7 +14,7 @@
   
 </head>
 
-<body>
+<body ng-controller="registerCtrl">
   <div class="form">
       
       <ul class="tab-group">
@@ -24,21 +26,21 @@
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
-          <form action="/" method="post">
+
           
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" ng-model="firstName" required autocomplete="off" />
             </div>
         
             <div class="field-wrap">
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text"ng-model="lastName" required autocomplete="off"/>
             </div>
           </div>
 
@@ -46,45 +48,42 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" ng-model="email" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Set A Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" ng-model="passwordRegister" required autocomplete="off"/>
           </div>
             <p><a href="home.html">home</a></p>
-            <button type="submit" class="button button-block"/>Get Started</button>
+            <button type="submit" class="button button-block" ng-click="register()">Get Started</button>
           
-          </form>
 
         </div>
         
         <div id="login">   
           <h1>Welcome Back!</h1>
           
-          <form action="/" method="post">
-          
+
             <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" ng-model="login" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" ng-model="passwordLogin" required autocomplete="off"/>
           </div>
 
           <p><a href="home.html">home</a></p>
-          <button class="button button-block"/>Log In</button>
+            <button class="button button-block" ng-click="loginButton()">Log In</a></button>
 
-          </form>
 
         </div>
         

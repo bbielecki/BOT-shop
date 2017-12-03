@@ -33,6 +33,7 @@ buildNumber.properties
 .idea/modules.xml
 .idea/vcs.xml
 BOT-shop.iml
+.idea/
 
 # Gradle:
 .idea/**/gradle.xml
