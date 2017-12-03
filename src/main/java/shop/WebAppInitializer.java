@@ -1,4 +1,4 @@
-package com.javacodegeeks.examples;
+package shop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.javacodegeeks.examples")
+@ComponentScan("shop")
 public class WebAppInitializer{
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) {
         SpringApplication.run(WebAppInitializer.class, args);
     }
 }
