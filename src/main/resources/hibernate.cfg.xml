@@ -31,6 +31,7 @@
         <property name="c3p0.timeout">180</property> <!-- seconds -->
 
         <mapping class="shop.model.User"/>
+        <mapping class="shop.model.Product"/>
 
 
 
