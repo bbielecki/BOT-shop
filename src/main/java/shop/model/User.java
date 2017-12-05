@@ -1,24 +1,36 @@
 package shop.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
+@Table(name = "users")
 public class User {
 
     @NotNull
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
+
     @NotNull
+    @Column(name = "login")
     private String login;
+
     @NotNull
+    @Column(name = "password")
     private String password;
+
     @NotNull
+    @Column(name = "name")
     private String name;
+
     @NotNull
+    @Column(name = "surname")
     private String surname;
+
     @NotNull
+    @Column(name = "address")
     private String address;
 
     public User() {

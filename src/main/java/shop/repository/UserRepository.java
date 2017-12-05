@@ -14,14 +14,16 @@ public class UserRepository implements UserRepositoryInterface{
 
     @Override
     public void registerUser(User user) {
-        factory = new Configuration().configure().buildSessionFactory();
-        Session session = factory.openSession();
-        Transaction transaction;
-        Integer userId;
+        factory = new Configuration()
+                .configure()
+                .addAnnotatedClass(User.class)
+                .buildSessionFactory();
 
-        transaction = session.beginTransaction();
-        userId = (Integer) session.save(user);
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Integer userId = (Integer) session.save(user);
         transaction.commit();
+        System.out.println(userId);
         session.close();
     }
 }

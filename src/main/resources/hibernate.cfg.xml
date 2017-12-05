@@ -22,15 +22,17 @@
             jacexon
         </property>
 
+        <!--<property name="hibernate.id.new_generator_mappings">false</property>-->
+
         <property name = "hibernate.connection.password">
             eloelo
         </property>
 
         <property name="c3p0.timeout">180</property> <!-- seconds -->
 
+        <mapping class="shop.model.User"/>
 
-        <!-- List of XML mapping files -->
-        <mapping resource = "/User.hbm.xml"/>
+
 
     </session-factory>
 </hibernate-configuration>

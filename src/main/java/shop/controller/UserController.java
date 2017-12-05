@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import shop.model.User;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
-import shop.repository.UserRepository;
 import shop.service.UserServiceInterface;
 
 @RestController
