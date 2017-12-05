@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/product-ctrl.js"></script>
+    <link rel="stylesheet" href="../css/table.css">
     <style>
         /* Remove the navbar's default rounded borders and increase the bottom margin */
         .navbar {
@@ -61,10 +62,31 @@
     </div>
 </nav>
 <div ng-controller="cartCtrl">
-    <div class="col-md-3">
-
+    <div class="col-md-3 ">
+        <p>{{testValue}}</p>
     </div>
     <div class="col-md-6">
+
+        <div class="box-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>Product Picture</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Identificator</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="product in productList">
+                    <tr>
+                        <!--<td>{{product.productImage}}</td>-->
+                        <!--<td>{{product.productDescription}}</td>-->
+                        <!--<td>{{product.productPrice}}</td>-->
+                        <!--<td>{{product.productID}}</td>-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </div>
     <div class="col-md-3">

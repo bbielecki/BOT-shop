@@ -4,11 +4,16 @@
     <title>Products</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/product-ctrl.js"></script>
+    <script src="js/cart-ctrl.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/main-ctrl.js"></script>
+    <script src="js/register-ctrl.js"></script>
     <style>
         /* Remove the navbar's default rounded borders and increase the bottom margin */
         .navbar {
@@ -29,14 +34,12 @@
     </style>
 
 </head>
-<body ng-controller="mainCtrl">
+<body>
 
 <div class="jumbotron">
     <div class="container text-center">
         <h1>BOT Shop</h1>
         <p>Scans, Cracks & Hacks</p>
-        <!--todo: usuń-->
-        <p>{{testText}}</p>
     </div>
 </div>
 
@@ -63,18 +66,21 @@
         </div>
     </div>
 </nav>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="product in greeting">
-    <div>
-        <div style="width:250px;border:2px solid green;">
-            <div ng-style="{'background-image':'url(data:image/jpeg;base64,'+product.picture[0]+')'}"
-                 style="background-size: contain;width:240px;height:240px; background-repeat: no-repeat">
-            </div>
-            <p>Product : {{product.time}}</p>
-            <p>Price : {{product.price}}</p>
-            <button id="{{product.id}}" class=""></button>
-
-        </div>
-    </div>
+<div class="view-container">
+    <div ng-view class="view-frame"></div>
 </div>
+<!--<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="product in greeting">-->
+    <!--<div>-->
+        <!--<div style="width:250px;border:2px solid green;">-->
+            <!--<div ng-style="{'background-image':'url(data:image/jpeg;base64,'+product.picture[0]+')'}"-->
+                 <!--style="background-size: contain;width:240px;height:240px; background-repeat: no-repeat">-->
+            <!--</div>-->
+            <!--<p>Product : {{product.time}}</p>-->
+            <!--<p>Price : {{product.price}}</p>-->
+            <!--<button id="{{product.id}}" class=""></button>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 </body>
 </html>

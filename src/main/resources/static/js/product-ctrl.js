@@ -1,10 +1,14 @@
-angular.module('app', [])
+angular.module('app', ['ngRoute'])
     .controller('mainCtrl', function ($scope, $http) {
-
+        $scope.product = {
+            productID : number,
+            productDescription : '',
+            productPrice: number,
+            productImage : ''
+        };
+        $scope.mainPageTest = 'gunwo';
 
         $http.get('http://localhost:5000/products/').then(function (response) {
-            //todo: usun
-            $scope.testText = "test Text is present";
             $scope.greeting = response.data;
             $scope.greeting.reverse();
             $scope.greeting.forEach(function (e) {
@@ -22,7 +26,6 @@ angular.module('app', [])
                     e.face_position.height = e.face_position.height / scale;
                     console.log(e);
                 });
-
             });
         });
     });
