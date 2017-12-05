@@ -3,6 +3,8 @@ angular.module('app', [])
 
 
         $http.get('http://localhost:5000/products/').then(function (response) {
+            //todo: usun
+            $scope.testText = "test Text is present";
             $scope.greeting = response.data;
             $scope.greeting.reverse();
             $scope.greeting.forEach(function (e) {
