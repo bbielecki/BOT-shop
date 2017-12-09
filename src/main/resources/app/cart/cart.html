@@ -1,7 +1,8 @@
 <div ng-controller="CartController">
+    <link rel="stylesheet" href="../cart/table.css">
+
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <link rel="stylesheet" href="../cart/table.css">
         <table>
             <thead>
             <tr>
@@ -14,7 +15,7 @@
             <tr>
                 <td>{{product.picture}}</td>
                 <td><strong>{{product.price}}</strong></td>
-                <td>{{product.description}}</td>
+                <td><strong>{{product.description}}</strong></td>
             </tr>
             </tbody>
         </table>
