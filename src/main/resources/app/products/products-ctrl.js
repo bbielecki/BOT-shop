@@ -7,7 +7,7 @@ angular.module('myApp.products', ['ngRoute'])
             controller: 'ProductsCtrl'
         });
     }])
-    .controller('ProductsCtrl', function ($scope) {
+    .controller('ProductsCtrl', function ($scope, ProductsFactory) {
         $scope.testText = 'Not implemented yet';
         $scope.productsList = [
             {
@@ -26,4 +26,9 @@ angular.module('myApp.products', ['ngRoute'])
                 description: 'a to w ogole inne'
             }
         ];
+
+
+        $scope.toCart = function (product) {
+            ProductsFactory.addProduct(product);
+        }
     });

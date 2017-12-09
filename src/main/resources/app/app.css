@@ -172,6 +172,25 @@ textarea {
   width: 100%;
 }
 
+.btn-default:hover {
+  background-color: #BA1114;
+  color: white;
+}
+
+.btn-default:focus {
+  background-color: #991114;
+  color: white;
+}
+
+.btn-default{
+  background-color: #880000;
+  color: white;
+}
+
+.btn-success {
+  background-color: darkgreen;
+}
+
 .forgot {
   margin-top: -20px;
   text-align: right;

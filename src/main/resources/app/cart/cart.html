@@ -1,14 +1,15 @@
 <div ng-controller="CartController">
-    <link rel="stylesheet" href="../cart/table.css">
+    <link rel="stylesheet" href="../../table.css">
 
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <table>
+        <table ng-if="productsList.length > 0">
             <thead>
             <tr>
                 <th>Picture</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th></th>
             </tr>
             </thead>
             <tbody ng-repeat="product in productsList">
@@ -16,9 +17,17 @@
                 <td>{{product.picture}}</td>
                 <td><strong>{{product.price}}</strong></td>
                 <td><strong>{{product.description}}</strong></td>
+                <td><button class="btn btn-default" ng-click="removeFromCart(product)">Remove</button></td>
             </tr>
             </tbody>
         </table>
+        <div ng-if="productsList.length < 1" style="text-align: center">
+            <p class="text-info" style="font-size: 20pt">Add products in <span><bold>Products</bold></span> section</p>
+        </div>
+        <div class="col-md-8"></div>
+        <div ng-if="productsList.length > 0" class="pull-left">
+            <button class="btn btn-success" >Accept and Buy</button>
+        </div>
     </div>
     <div class="col-md-2"></div>
 

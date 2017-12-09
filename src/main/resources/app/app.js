@@ -8,6 +8,7 @@ angular.module('myApp', [
     'myApp.products',
     'myApp.contacts',
     'myApp.register',
+    'myApp.cartFactory',
     'myApp.version'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
