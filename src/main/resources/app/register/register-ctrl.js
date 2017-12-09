@@ -27,7 +27,7 @@ angular.module('myApp.register', [])
         }
 
         function loginButton() {
-            window.location.assign("../cart/cart.html");
+            window.location.assign("/cart");
             window.location.assign(url);
             $http.post("http://localhost:8080/login", {
                 'login': $scope.login,
