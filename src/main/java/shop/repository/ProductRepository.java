@@ -10,19 +10,21 @@ import shop.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Repository
 public class ProductRepository implements ProductRepositoryInterface {
 
     private SessionFactory factory;
 
-    @Override
-    public Product getProductById(int id) {
+    public ProductRepository() {
         factory = new Configuration()
                 .configure()
                 .addAnnotatedClass(Product.class)
                 .buildSessionFactory();
+    }
+
+    @Override
+    public Product getProductById(int id) {
 
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -37,10 +39,6 @@ public class ProductRepository implements ProductRepositoryInterface {
 
     @Override
     public List<Product> getAllProducts() {
-        factory = new Configuration()
-                .configure()
-                .addAnnotatedClass(Product.class)
-                .buildSessionFactory();
 
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -55,5 +53,16 @@ public class ProductRepository implements ProductRepositoryInterface {
             newList.add((Product) object);
         }
         return newList;
+    }
+
+    @Override
+    public Product addProduct(Product productToAdd) {
+
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Integer id = (Integer) session.save(productToAdd);
+        transaction.commit();
+        session.close();
+        return productToAdd;
     }
 }
