@@ -1,7 +1,7 @@
 
 angular.module('myApp.home', ['ngRoute'])
     .config(['$routeProvider', function ($routeProvider) {
-        'use strict';
+        // 'use strict';
         $routeProvider.when('/home', {
             templateUrl: 'home/home.html',
             controller: 'HomeCtrl'

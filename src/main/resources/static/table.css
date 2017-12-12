@@ -1,5 +1,4 @@
 /*body {*/
-    /*background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);*/
     /*color: #444;*/
     /*font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;*/
     /*text-shadow: 0 1px 0 #fff;*/
@@ -22,14 +21,14 @@ table {
     margin: 30px auto;
     text-align: left;
     width: 800px;
-    background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
+    background: #fafafa;
     color: #444;
     font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
     text-shadow: 0 1px 0 #fff;
 }
 
 th {
-    background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+    background: linear-gradient(#777, #444);
     border-left: 1px solid #555;
     border-right: 1px solid #777;
     border-top: 1px solid #555;
@@ -83,12 +82,8 @@ td:last-child {
     box-shadow: inset -1px 0 0 #fff;
 }
 
-tr {
-    background: url(https://jackrugile.com/images/misc/noise-diagonal.png);
-}
-
 tr:nth-child(odd) td {
-    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);
+    background: #f1f1f1 ;
 }
 
 tr:last-of-type td {

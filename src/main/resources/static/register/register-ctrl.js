@@ -1,6 +1,6 @@
 angular.module('myApp.register', [])
     .config(['$routeProvider', function ($routeProvider) {
-        'use strict';
+        // 'use strict';
         $routeProvider.when('/register', {
             templateUrl: 'register/register.html',
             controller: 'RegisterCtrl'
