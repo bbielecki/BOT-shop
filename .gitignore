@@ -33,6 +33,7 @@ buildNumber.properties
 .idea/modules.xml
 .idea/vcs.xml
 BOT-shop.iml
+.idea/
 
 # Gradle:
 .idea/**/gradle.xml
@@ -67,3 +68,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+*.json
+package-lock.json
+src/main/main.iml
+*.iml

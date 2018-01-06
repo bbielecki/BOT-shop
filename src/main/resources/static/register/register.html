@@ -1,0 +1,46 @@
+<div ng-controller="RegisterCtrl">
+    <div class="form" style="color:white">
+        <ul class="tab-group">
+            <li class="tab"ng-class="signup"><a ng-click="chooseRegister()">Sign Up</a></li>
+            <li class="tab"ng-class="loginClass"><a ng-click="chooseLogin()">Log In</a></li>
+        </ul>
+        <div ng-if="loginPanel">
+            <form ng-submit="loginButton()">
+                <div class="container">
+                    <h3>We were looking forward for your comeback</h3>
+                    <div class="form-group">
+                        Email <input style="width:500px" type="email" class="form-control" ng-model="login" required>
+                    </div>
+                    <div class="form-group">
+                        Password:
+                        <input style="width:500px" type="password" class="form-control" ng-model="passwordLogin" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Login</button>
+                </div>
+            </form>
+        </div>
+        <div ng-if="!loginPanel">
+            <form ng-submit="register()">
+                <div class="container">
+                    <h3>Get your account</h3>
+                    <div class="form-group">
+                        First Name <input style="width:500px" type="text" class="form-control" ng-model="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        Last Name <input style="width:500px" type="text" class="form-control" ng-model="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        Email:
+                        <input type="email" style="width:500px" class="form-control" ng-model="email" required>
+                    </div>
+                    <div class="form-group">
+                        Password:
+                        <input style="width:500px" type="password" class="form-control" ng-model="passwordRegister" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

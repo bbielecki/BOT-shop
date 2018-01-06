@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html ang="en" ng-app="app">
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-    <title>Products</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BOT shop</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/product-ctrl.js"></script>
+    <link rel="stylesheet" href="app.css">
     <style>
         /* Remove the navbar's default rounded borders and increase the bottom margin */
         .navbar {
@@ -28,11 +37,12 @@
         }
     </style>
 </head>
-<body ng-controller="mainCtrl">
+<body>
+
 
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>BOT Shop Products</h1>
+        <h1>BOT Shop</h1>
         <p>Scans, Cracks & Hacks</p>
     </div>
 </div>
@@ -45,33 +55,33 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="views/home.html">Logo</a>
+            <a class="navbar-brand" href="#!/home">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="views/home.html">Home</a></li>
-                <li><a href="index.html">Products</a></li>
-                <li><a href="views/contacts.html">Contact</a></li>
+                <li><a href="#!/home">Home</a></li>
+                <li class="active"><a href="#!/products">Products</a></li>
+                <li><a href="#!/contacts">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="views/register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
-                <li><a href="views/cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+                <li><a href="#!/register"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+                <li><a href="#!/cart"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="product in greeting">
-    <div>
-        <div style="width:250px;border:2px solid green;">
-            <div ng-style="{'background-image':'url(data:image/jpeg;base64,'+product.picture[0]+')'}"
-                 style="background-size: contain;width:240px;height:240px; background-repeat: no-repeat">
-            </div>
-            <p>Product : {{product.time}}</p>
-            <p>Price : {{product.price}}</p>
-            <button id="{{product.id}}" class=""></button>
 
-        </div>
-    </div>
-</div>
+<div ng-view></div>
+
+<script src="app.js"></script>
+<script src="cart/cart-ctrl.js"></script>
+<script src="contacts/contacts-ctrl.js"></script>
+<script src="home/home-ctrl.js"></script>
+<script src="offer/offer-ctrl.js"></script>
+<script src="register/register-ctrl.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+<script src="services/cart-factory.js"></script>
 </body>
 </html>
