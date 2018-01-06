@@ -25,7 +25,7 @@
         <!--<property name="hibernate.id.new_generator_mappings">false</property>-->
 
         <property name = "hibernate.connection.password">
-            janek2901
+            abcd
         </property>
 
         <property name="c3p0.timeout">180</property> <!-- seconds -->

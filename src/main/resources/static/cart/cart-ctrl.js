@@ -22,6 +22,6 @@ angular.module('myApp.cart', ['ngRoute'])
 
         $scope.removeFromCart = function (product) {
             $log.log('Cart: removing product ' + product.description);
-
+            ProductsFactory.removeProduct(product);
         }
     });
