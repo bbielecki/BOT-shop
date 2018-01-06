@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import shop.model.Product;
 import shop.service.ProductService;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -27,5 +26,14 @@ public class ProductController {
     @RequestMapping("/products")
     public List<Product> getAllProducts(@RequestHeader MultiValueMap<String, String> headers) {
         return productService.getAllProducts();
+    }
+
+    @PostMapping
+    @RequestMapping("/products/add")
+    public Product addProduct(@RequestHeader MultiValueMap<String, String> headers,
+                              @RequestBody Product product) {
+
+        return productService.addProduct(product);
+
     }
 }
