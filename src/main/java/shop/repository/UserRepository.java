@@ -49,4 +49,19 @@ public class UserRepository implements UserRepositoryInterface{
         session.close();
         return canLogin;
     }
+
+    @Override
+    public User getUserByName(String userName){
+
+        factory = new Configuration()
+                .configure()
+                .addAnnotatedClass(User.class)
+                .buildSessionFactory();
+
+        Session session = factory.openSession();
+        User foundUser = session.get(User.class, userName);
+        session.close();
+
+        return foundUser;
+    }
 }

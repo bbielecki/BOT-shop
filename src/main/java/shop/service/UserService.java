@@ -20,4 +20,9 @@ public class UserService implements UserServiceInterface {
     public boolean loginUser(User userToLogin) {
         return userRepository.loginUser(userToLogin);
     }
+
+    @Override
+    public User findUserByName(String userName) {
+        return userRepository.getUserByName(userName);
+    }
 }
