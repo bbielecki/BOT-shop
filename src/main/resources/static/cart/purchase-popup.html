@@ -1,0 +1,15 @@
+<div class="my-popup-content" ng-controller="CartController">
+    <section>
+            <h4>Add fruit</h4>
+            <div class="main-content">
+                <p>Are you sure to buy this products:</p>
+                <div ng-repeat="product in productsList">
+                    <p>{{product.description}} : {{product.price}}</p>
+                </div>
+            </div>
+            <footer>
+                <button class="left popup-close">cancel</button>
+                <button class="popup-close right">submit</button>
+            </footer>
+        </section>
+</div>

@@ -195,3 +195,24 @@ textarea {
   margin-top: -20px;
   text-align: right;
 }
+
+.popup-content .map{
+  width:100%;
+  height:15em;
+}
+.popup-content iframe{
+  display:block;
+}
+.popup-content em{
+  font-weight:bold;
+}
+.popup-content .clickable{
+  cursor:pointer;
+}
+.italic{
+  font-style:italic;
+}
+.popup-content div {
+  width:100%;
+  height:15em;
+}
