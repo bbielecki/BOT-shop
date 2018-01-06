@@ -73,3 +73,4 @@ fabric.properties
 package-lock.json
 src/main/main.iml
 *.iml
+src/main/resources/static/hibernate.cfg.xml

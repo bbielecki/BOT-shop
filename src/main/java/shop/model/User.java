@@ -33,6 +33,9 @@ public class User {
     @Column(name = "address")
     private String address;
 
+    @Column(name = "role")
+    private String role = "USER";
+
     public User() {
 
     }
@@ -67,6 +70,8 @@ public class User {
         return address;
     }
 
+    public String getRole(){return role;}
+
     public void setId(int id) {
         this.id = id;
     }
@@ -90,5 +95,7 @@ public class User {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public void setRole(String role){this.role = role;}
     //endregion
 }

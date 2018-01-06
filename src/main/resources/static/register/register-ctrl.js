@@ -19,25 +19,24 @@ angular.module('myApp.register', [])
         // var url = $location.absUrl().replace("register", "index");
 
         function register() {
-            console.log($location.absUrl());
             $http.post("http://localhost:8080/register", {
-                'firstname': $scope.firstName,
-                'lastname': $scope.lastName,
-                'email': $scope.email,
-                'password': $scope.passwordRegister
+                'login': this.email,
+                'password': this.passwordRegister,
+                'name': this.firstName,
+                'surname': this.lastName,
+                'address': this.email
             })
                 .success(function () {
                     console.log("Register!!!");
+                    window.assign("/cart")
                 });
         }
 
         function loginButton() {
 
-            window.location.assign("/cart");
-            window.location.assign(url);
             $http.post("http://localhost:8080/login", {
-                'login': $scope.login,
-                'pasword': $scope.passwordLogin
+                'login': this.login,
+                'pasword': this.passwordLogin
 
             })
                 .success(function () {
