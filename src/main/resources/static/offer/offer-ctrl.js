@@ -1,9 +1,9 @@
 
 angular.module('myApp.products', ['ngRoute'])
     .config(['$routeProvider', function ($routeProvider) {
-        'use strict';
+        // 'use strict';
         $routeProvider.when('/products', {
-            templateUrl: 'products/products.html',
+             templateUrl: 'offer/offer.html',
             controller: 'ProductsCtrl'
         });
     }])

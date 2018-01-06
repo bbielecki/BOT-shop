@@ -1,7 +1,7 @@
 
 angular.module('myApp.contacts', ['ngRoute'])
     .config(['$routeProvider', function ($routeProvider) {
-        'use strict';
+        // 'use strict';
         $routeProvider.when('/contacts', {
             templateUrl: 'contacts/contacts.html',
             controller: 'ContactsCtrl'
