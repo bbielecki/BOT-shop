@@ -8,23 +8,7 @@ angular.module('myApp.cart', ['ngRoute'])
     }])
     .controller('CartController', function ($scope, ProductsFactory, $log) {
         $scope.testText = "Jestem koszykiem";
-        $scope.productsList = [
-            {
-                picture: 'sciezka/do/zdjecia',
-                price: 11,
-                description: 'jablko'
-            },
-            {
-                picture: 'sciezka/do/zdjecia2',
-                price: 111,
-                description: 'gruszka'
-            },
-            {
-                picture: 'sciezka/do/zdjecia3',
-                price: 22,
-                description: 'ananas'
-            }
-        ];
+        $scope.productsList = [];
 
         $scope.$watch(
             function () {
