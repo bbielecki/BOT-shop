@@ -7,12 +7,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "user")
 public class User {
 
-    @NotNull
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
-
     @NotNull
     @Column(name = "login")
     private String login;
@@ -46,9 +41,6 @@ public class User {
     }
 
     //region BOILERPLATE
-    public int getId() {
-        return id;
-    }
 
     public String getLogin() {
         return login;
@@ -71,10 +63,6 @@ public class User {
     }
 
     public String getRole(){return role;}
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setLogin(String login) {
         this.login = login;

@@ -15,4 +15,9 @@ public class UserService implements UserServiceInterface {
     public void registerUser(User userToRegister) {
         userRepository.registerUser(userToRegister);
     }
+
+    @Override
+    public boolean loginUser(User userToLogin) {
+        return userRepository.loginUser(userToLogin);
+    }
 }

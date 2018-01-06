@@ -26,4 +26,27 @@ public class UserRepository implements UserRepositoryInterface{
         System.out.println(userId);
         session.close();
     }
+
+    @Override
+    public boolean loginUser(User user) {
+        System.out.println(user.getAddress());
+        boolean canLogin;
+        factory = new Configuration()
+                .configure()
+                .addAnnotatedClass(User.class)
+                .buildSessionFactory();
+
+        Session session = factory.openSession();
+        User userInDB = session.get(User.class, user.getLogin());
+
+        canLogin = userInDB != null && (userInDB.getPassword().equals(user.getPassword()));
+
+        if (userInDB != null)
+            System.out.println(userInDB.getAddress());
+        else
+            System.out.println("User doesn't exists");
+
+        session.close();
+        return canLogin;
+    }
 }

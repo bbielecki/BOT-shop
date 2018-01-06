@@ -19,6 +19,7 @@ angular.module('myApp.register', [])
         // var url = $location.absUrl().replace("register", "index");
 
         function register() {
+            console.log($location.absUrl());
             $http.post("http://localhost:8080/register", {
                 'login': this.email,
                 'password': this.passwordRegister,
@@ -34,14 +35,20 @@ angular.module('myApp.register', [])
 
         function loginButton() {
 
+            // window.location.assign("/cart");
+            // window.location.assign(url);
             $http.post("http://localhost:8080/login", {
-                'login': this.login,
-                'pasword': this.passwordLogin
+                'login': "abc@abc.com",
+                'password': "abc",
+                'name':"null",
+                'surname': "null",
+                'address': "null"
+                // 'login': this.login,
+                // 'password': this.passwordLogin
 
             })
                 .success(function () {
                     console.log("Logged!!!");
-                    window.location.assign("/cart");
 
                 });
         }
