@@ -44,17 +44,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/css/**","/contacts","/contacts/**","/home","/home/**",
-                        "/login","/register/**")
-                .permitAll().anyRequest().anonymous()
-                .and()
-                .authorizeRequests()
-                .antMatchers("/cart", "/cart/**","/offer/**")
-                .hasAuthority("USER").anyRequest().authenticated()
-                .and()
-                .authorizeRequests()
-                .antMatchers("/#!/products")
-                .hasAuthority("USER").anyRequest().authenticated()
+                .antMatchers("/offer/**")
+                .hasAuthority("ADMIN").anyRequest().authenticated()
 //                .and().formLogin().loginPage("#!/login").permitAll()
                 .and().csrf().disable();
     }
